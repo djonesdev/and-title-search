@@ -1,7 +1,15 @@
+import { useEffect } from "react"
+
 import logo from './logo.svg';
 import './App.css';
+import { apiService } from './services/giffy'
 
 function App() {
+
+  useEffect(() => {
+    console.log(apiService.getGifBySearch("super saiyan"))
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
