@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
@@ -16,7 +16,6 @@ const Page = () => {
     setGifData(data)
   }
 
-  console.log(gifData && gifData.data.data[0].images.downsized.url, "gifData")
     return (
         <React.Fragment>
               <CssBaseline />

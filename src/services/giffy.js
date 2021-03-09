@@ -7,7 +7,6 @@ const apiInstance = axios.create({
 
 export const apiService = {
     getGifBySearch: (query) => {
-        // TODO: move api key into env vars
         const data = apiInstance.get('gifs/search', { params: { api_key: process.env.REACT_APP_API_KEY, q: query} } )
         return data 
     }
