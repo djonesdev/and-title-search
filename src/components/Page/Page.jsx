@@ -15,7 +15,6 @@ const Page = () => {
     const data = await apiService.getGifBySearch(searchTerm)
     setGifData(data)
   }
-
     return (
         <React.Fragment>
               <CssBaseline />
@@ -24,6 +23,7 @@ const Page = () => {
                 <TextContainer onChange={setSearchTerm} value={searchTerm}/>
                 <Button variant="contained" onClick={() => onClickSearch() } style={{ marginTop: 10, backgroundColor: '#a83232' }}>Search Gifs!!!!</Button>
                 {gifData && <p>This is your share url {gifData.data.data[0].images.downsized.url}</p>}
+                {gifData && gifData.data.data.map(data => <img src={data.images.downsized.url}/>)}
               </Container>
         </React.Fragment>
     );
