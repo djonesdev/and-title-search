@@ -2,12 +2,12 @@ import { useEffect } from "react"
 
 import logo from './logo.svg';
 import './App.css';
-import Giffy from './services/giffy'
+import { apiService } from './services/giffy'
 
 function App() {
 
   useEffect(() => {
-    console.log(Giffy.getGifBySearch("super saiyan"))
+    console.log(apiService.getGifBySearch("super saiyan"))
   }, [])
 
   return (
